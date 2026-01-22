@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box; 
+}
+
+html, body{
+    font-family: Mulish, sans-serif !important;
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+    padding:0;
+}
+.navbar{
+    background-color: rgb(156 87 239);;
+    height: 56px;
+    top:0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    z-index: 1000;
+}
+.logo{
+    padding: 8px;
+    width: 140px;
+    height: 40px;
+    filter: invert(1) brightness(2);
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.notification i{
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+}
+.user select{
+    background-color: rgb(156 87 239);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.main{
+    margin-top: 56px;
+    padding: 20px;
+}
+
+
+
+.welcome, .welcome-msg{
+    font-size: 40px;
+    color: rgb(124, 120, 120);
+    font-weight: 200;
+}
+
+.nav-tabs{
+    border-bottom: 2px solid rgb(186, 185, 185);
+    padding: 0 0 10px 0;
+    margin: 11px 0 9px;
+}
+.nav{
+    display: inline-flex;
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    gap: 18px;
+}
+.nav-heading{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.nav-link{
+    text-decoration: none;
+}
+
+.school {
+    margin:20px 0;
+    padding: 15px 0;
+}
+.school-name{
+    font-size: 12px;
+    margin:0 0 15px 0;
+}
+
+.school-data{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.sort-btn{
+    background-color: rgb(120 61 197);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.sort-btn:hover{
+    background-color: rgb(156 87 239);
+
+}
+
+.sort-criteria span{
+    font-size: 14px;
+    color: rgb(124, 120, 120);
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 400px;;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8px;
+    color: rgb(120 61 197);
+    background-color: rgb(219, 192, 252);
+}
+.left-header{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+input[type="checkbox"]{
+    border-radius: 2px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+.card-add{
+    display: flex;
+    flex-direction: row;
+    gap:4px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(198, 195, 195);
+}
+.add-box{
+    display:flex;
+    flex-direction: column;
+    width:50px;
+    height:50px;
+    align-items: center;
+    border: 1px dashed rgb(120, 119, 119);
+    border-radius: 4px;
+}
+
+.card-icons{
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+}
+.icon-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    padding: 8px 8px 15px;
+}
+.icon-item i{
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: rgb(219, 192, 252);
+    border-radius: 2px;
+}
+
+.sidebar-container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.school-class{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-class{
+    background-color: white;
+    border:3px solid rgb(120 61 197);
+    color: rgb(83, 8, 181);
+    padding: 8px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.new-class:hover{
+    background-color: rgb(120 61 197);
+    color: white;
+}
+.course-info{
+    padding:10px;
+}
