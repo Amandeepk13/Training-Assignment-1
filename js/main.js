@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     usertypeSelect.addEventListener('change', (e) => {
          if(e.target.value === 'logout'){
             localStorage.removeItem('loggedUser');
-            window.location.href = 'login.html';
+            window.location.href = '/html/login.html';
          }
     });
 
