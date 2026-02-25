@@ -5,5 +5,5 @@ loginForm.addEventListener('submit', (e) => {
     const usernameInput = document.getElementById('username').value;
     localStorage.setItem('loggedUser' , usernameInput);
 
-    window.location.href = '/html/main.html';
+    window.location.href = '../main.html';
 });

@@ -19,5 +19,5 @@ classForm.addEventListener('submit', (e) => {
 
     localStorage.setItem('uClasses', JSON.stringify(classes));
 
-    window.location.href = '/html/main.html';
+    window.location.href = '../main.html';
 });
