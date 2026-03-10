@@ -3,54 +3,28 @@
 }
 
 html, body{
-    font-family: Mulish, sans-serif !important;
-    display: flex;
-    justify-content: space-around;
+    font-family: 'Mulish', sans-serif !important;
     margin:0;
     padding:0;
 }
-.navbar{
-    background-color: rgb(156 87 239);;
-    height: 56px;
-    top:0;
-    left:0;
-    position: fixed;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    z-index: 1000;
-}
-.logo{
-    padding: 8px;
-    width: 140px;
-    height: 40px;
-    filter: invert(1) brightness(2);
-}
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.notification i{
-    color: white;
-    font-size: 24px;
-    padding: 15px;
-    cursor: pointer;
-}
-.user select{
-    background-color: rgb(156 87 239);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+
 .main{
     margin-top: 56px;
+    display:flex;
+    justify-content: center;
+    transition: right 0.2s ease;
+    width: 100%;
+}
+
+.main-content {
+    width: 100%;
+    max-width:1000px;
     padding: 20px;
 }
 
+body.sidebar-open .main {
+    padding-right: 200px;
+}
 
 
 .welcome, .welcome-msg{
@@ -92,7 +66,6 @@ html, body{
 .school-data{
     display: flex;
     gap: 10px;
-    align-items: center;
 }
 .sort-btn{
     background-color: rgb(120 61 197);
@@ -113,15 +86,18 @@ html, body{
 
 .card-container{
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 20px;
-    column-gap: 30px;
+    row-gap: 30px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    width: 400px;;
+    width: 100%;
+    max-width: 400px;
 }
 
 .card-header{
@@ -148,7 +124,7 @@ input[type="checkbox"]{
 .card-add{
     display: flex;
     flex-direction: row;
-    gap:4px;
+    gap:6px;
     padding: 10px;
     border-bottom: 1px solid rgb(198, 195, 195);
 }
@@ -160,6 +136,7 @@ input[type="checkbox"]{
     align-items: center;
     border: 1px dashed rgb(120, 119, 119);
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .card-icons{
@@ -182,10 +159,7 @@ input[type="checkbox"]{
     border-radius: 2px;
 }
 
-.sidebar-container{
-    display: flex;
-    min-height: 100vh;
-}
+
 
 .school-class{
     display: flex;
@@ -207,4 +181,38 @@ input[type="checkbox"]{
 }
 .course-info{
     padding:10px;
+}
+
+@media (max-width: 864px){
+    
+    .main-content{
+        padding:10px;
+    }
+    .welcome-msg{
+        font-size:25px;
+    }
+    .nav{
+        gap:10px;
+    }
+    .card{
+        max-width: 300px;
+    }
+    .card-container{
+        max-width: 700;
+        row-gap: 10px;
+    }
+    body.sidebar-open .main {
+       padding-right: 0;
+   }
+}
+
+@media (max-width: 630px){
+    .card-container{
+        max-width: 550px;
+        grid-template-columns: 1fr;
+
+    }
+    .card{
+        max-width: 400px;
+    }
 }

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambridge University Press</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -16,7 +17,7 @@
     <header>
         <div class="navbar">
             <div class="logo-container">
-                <img src="cambridge-logo-black-transparent.png" alt="logo" class="logo">
+                <img src="/logo/cambridge-logo-black-transparent.png" alt="logo" class="logo">
             </div>
             <div class="menu">
                 <div class="notification">
@@ -24,9 +25,10 @@
                 </div>
                 <div class="user">
                     <select id="user-type">
-                        <option value="teacher" selected>teacher</option>
-                        <option value="student">student</option>
-                        <option value="learner">learner</option>
+                        <option value="teacher" selected>username</option>
+                        <option value="student">Join a School</option>
+                        <option value="learner">Help</option>
+                        <hr> <option value="logout">Logout</option>
                     </select>
                 </div>
             </div>
@@ -38,14 +40,14 @@
 
     <div class="main">
 
-        <div class="main-content" id="main-content">
+        <main class="main-content" id="main-content">
 
             <section class="welcome">
                 <h1 class="welcome-msg" title="teacher">Hi teacher!</h1>
             </section>
 
 
-            <section class="nav-tabs">
+            <nav class="nav-tabs">
                 <ul class="nav">
                     <li class="myclasses"><a class="nav-link" href="#"><span class="nav-heading">My Classes</span> </a>
                     </li>
@@ -54,19 +56,21 @@
                     <li class="mytraining"><a class="nav-link" href="#"><span class="nav-heading">My Training</span></a>
                     </li>
                 </ul>
-            </section>
+            </nav>
 
             <section class="school">
 
                 <div class="school-class">
                     <h3 class="school-name">GTBIT college </h3>
-                    <button class="new-class">create a class</button>
+                    <a href="/html/create-class.html">
+                    <button class="new-class" type="button">create a class</button>
+                    </a>
                 </div>
 
 
                 <div class="school-data">
                     <div class="sort-filter">
-                        <button class="sort-btn"> Sort / Filter</button>
+                        <button class="sort-btn" type="button"> Sort / Filter</button>
                     </div>
                     <div class="sort-criteria">
                         <span> Class name (A-Z) / All materials</span>
@@ -75,25 +79,23 @@
 
             </section>
 
-            <section class="card-container">
+            <section class="card-container" id="card-holder">
 
-                <div class="card">
+                <div class="card" data-startDate="2025-01-12" data-endDate="2025-05-12">
                     <div class="card-header">
                         <div class="left-header">
-                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox-1">
                             <h4> Practice 1</h4>
                         </div>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="card-body">
                         <div class="card-add">
-                            <div class="add-box">
+                            <div class="add-box btn-to-add">
                                 <div class="add-box-icon">+</div>
                                 <div class="add-box-text">Add</div>
                             </div>
-                            <div class="add-box">
-
-                            </div>
+                            
 
                         </div>
                         <div class="course-info">
@@ -117,23 +119,58 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-startDate="2024-01-12" data-endDate="2024-05-12">
                     <div class="card-header">
                         <div class="left-header">
-                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox-2">
+                            <h4> Resource 1</h4>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-add">
+                            <div class="add-box btn-to-add">
+                                <div class="add-box-icon">+</div>
+                                <div class="add-box-text">Add</div>
+                            </div>
+                            
+
+                        </div>
+                        <div class="course-info">
+                            <div class="card-icons">
+                                <div class="icon-item data">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Class Data</span>
+                                </div>
+                                <div class="icon-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <span>Assignments</span>
+                                </div>
+                                <div class="icon-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Materials</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-startDate="2025-03-12" data-endDate="2025-09-12">
+                    <div class="card-header">
+                        <div class="left-header">
+                            <input type="checkbox" name="checkbox" id="checkbox-3">
                             <h4> Practice 2</h4>
                         </div>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="card-body">
                         <div class="card-add">
-                            <div class="add-box">
+                            <div class="add-box btn-to-add">
                                 <div class="add-box-icon">+</div>
                                 <div class="add-box-text">Add</div>
                             </div>
-                            <div class="add-box">
-
-                            </div>
+                        
 
                         </div>
                         <div class="course-info">
@@ -156,23 +193,58 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-startDate="2023-01-12" data-endDate="2023-05-12">
                     <div class="card-header">
                         <div class="left-header">
-                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox-4">
+                            <h4> Resource 2</h4>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-add">
+                            <div class="add-box btn-to-add">
+                                <div class="add-box-icon">+</div>
+                                <div class="add-box-text">Add</div>
+                            </div>
+                            
+
+                        </div>
+                        <div class="course-info">
+                            <div class="card-icons">
+                                <div class="icon-item data">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Class Data</span>
+                                </div>
+                                <div class="icon-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <span>Assignments</span>
+                                </div>
+                                <div class="icon-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Materials</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-startDate="2025-01-12" data-endDate="2025-02-12">
+                    <div class="card-header">
+                        <div class="left-header">
+                            <input type="checkbox" name="checkbox" id="checkbox-5">
                             <h4> Practice 3</h4>
                         </div>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="card-body">
                         <div class="card-add">
-                            <div class="add-box">
+                            <div class="add-box btn-to-add">
                                 <div class="add-box-icon">+</div>
                                 <div class="add-box-text">Add</div>
                             </div>
-                            <div class="add-box">
-
-                            </div>
+                            
 
                         </div>
                         <div class="course-info">
@@ -195,23 +267,21 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-startDate="2025-05-12" data-endDate="2026-05-12">
                     <div class="card-header">
                         <div class="left-header">
-                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox-6">
                             <h4> Practice 4</h4>
                         </div>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="card-body">
                         <div class="card-add">
-                            <div class="add-box">
+                            <div class="add-box btn-to-add">
                                 <div class="add-box-icon">+</div>
                                 <div class="add-box-text">Add</div>
                             </div>
-                            <div class="add-box">
-
-                            </div>
+                            
 
                         </div>
                         <div class="course-info">
@@ -234,90 +304,13 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <div class="left-header">
-                            <input type="checkbox" name="checkbox" id="checkbox">
-                            <h4> Practice 5</h4>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-add">
-                            <div class="add-box">
-                                <div class="add-box-icon">+</div>
-                                <div class="add-box-text">Add</div>
-                            </div>
-                            <div class="add-box">
-
-                            </div>
-
-                        </div>
-                        <div class="course-info">
-                            <div class="card-icons">
-                                <div class="icon-item data">
-                                    <i class="fas fa-chart-bar"></i>
-                                    <span>Class Data</span>
-                                </div>
-                                <div class="icon-item">
-                                    <i class="fas fa-tasks"></i>
-                                    <span>Assignments</span>
-                                </div>
-                                <div class="icon-item">
-                                    <i class="fas fa-book"></i>
-                                    <span>Materials</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="left-header">
-                            <input type="checkbox" name="checkbox" id="checkbox">
-                            <h4> Practice 6</h4>
-                        </div>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-add">
-                            <div class="add-box">
-                                <div class="add-box-icon">+</div>
-                                <div class="add-box-text">Add</div>
-                            </div>
-                            <div class="add-box">
-
-                            </div>
-
-                        </div>
-                        <div class="course-info">
-                            <div class="card-icons">
-                                <div class="icon-item data">
-                                    <i class="fas fa-chart-bar"></i>
-                                    <span>Class Data</span>
-                                </div>
-                                <div class="icon-item">
-                                    <i class="fas fa-tasks"></i>
-                                    <span>Assignments</span>
-                                </div>
-                                <div class="icon-item">
-                                    <i class="fas fa-book"></i>
-                                    <span>Materials</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
             </section>
-        </div>
+        </main>
     </div>
 
 
 
-    <div class="sidebar-container" id="sidebar">
+    <aside class="sidebar-container" id="sidebar">
         <div class="sidebar">
             <div class="sidebar-title">
                 <i class="fa fa-angle-left" id="close-sidebar"></i>
@@ -326,10 +319,10 @@
 
             <div class="sort-options">
                 <label>
-                    <input type="radio" name="sort" value="class-name" checked> Class Name
+                    <input type="radio" name="sort" value="class-name" > Class Name
                 </label>
                 <label>
-                    <input type="radio" name="sort" value="start-date">Start Date
+                    <input type="radio" name="sort" value="start-date"> Start Date
                 </label>
                 <label>
                     <input type="radio" name="sort" value="end-date"> End Date
@@ -342,25 +335,39 @@
                     <i class="fa fa-caret-down"></i>
                 </div>
 
-                </span> A-Z
+                <span> A-Z </span>
 
             </div>
             <hr>
             <div class="filter-section">
                 <div class="filter-header">
                     <h3>Filter by</h3>
-                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-right" id="filter-arrow"></i>
+                </div>
+
+                <div class="filter-options" id="filter-options-types">
+                    <div class="filter-choice">
+                         <input type="checkbox" class="filter-check" value="Practice"> Practice
+                    
+                    </div>
+                    <div class="filter-choice">
+                        <input type="checkbox" class="filter-check" value="Resource"> Resource
+                    </div>
+                    
+                    
                 </div>
 
                 <div class="filter-btn">
-                    <button class="sidebar-btn clear"> Clear all</button>
-                    <button class="sidebar-btn apply">Apply</button>
+                    <button class="sidebar-btn clear" id="clear-filters"> Clear all</button>
+                    <button class="sidebar-btn apply" id="apply-filters">Apply</button>
                 </div>
             </div>
         </div>
 
-    </div>
-
+    </aside>
+    
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
